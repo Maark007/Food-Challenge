@@ -1,6 +1,6 @@
-import React from 'react';
-import './Styles/global.css'
-import Foods from './models/food'
+import React from "react";
+import "./Styles/global.css";
+import Foods from "./models/food";
 import {
   Main,
   TitleContainer,
@@ -11,8 +11,8 @@ import {
   Menu,
   MenuFood,
   AboutTheCreator,
-  Footer
-} from './Styles/styled'
+  Footer,
+} from "./Styles/styled";
 
 export default function App() {
   return (
@@ -36,9 +36,13 @@ export default function App() {
             <span>Fresh</span>
           </div>
           <div className="food-box-subtitle">
-            <span>Healtly switcher chefs fo all the prep work, like peeding,</span>
+            <span>
+              Healtly switcher chefs fo all the prep work, like peeding,
+            </span>
             <span>chopping & marinating, so you can cook a fresh food.</span>
-            <button className="food-box-button">Order now <i className="fas fa-arrow-right" /></button>
+            <button className="food-box-button">
+              Order now <i className="fas fa-arrow-right" />
+            </button>
           </div>
         </FoodBox>
         <Informations>
@@ -77,14 +81,26 @@ export default function App() {
               <span className="right-box-title">Food is An important Part</span>
               <span className="right-box-title">of a Balanced Diet</span>
               <div className="right-box-subtitle-box">
-                <span className="right-box-subtitle">They actually assured me over and over that take</span>
-                <span className="right-box-subtitle">little time off and come back and work. Fast</span>
-                <span className="right-box-subtitle">forward tow weeks after</span>
-                <span className="right-box-subtitle">we are going for a new project.</span>
+                <span className="right-box-subtitle">
+                  They actually assured me over and over that take
+                </span>
+                <span className="right-box-subtitle">
+                  little time off and come back and work. Fast
+                </span>
+                <span className="right-box-subtitle">
+                  forward tow weeks after
+                </span>
+                <span className="right-box-subtitle">
+                  we are going for a new project.
+                </span>
                 <div className="right-box-subtitle-box">
-                  <span className="right-box-subtitle">I wrote to let them know ready to come back they</span>
+                  <span className="right-box-subtitle">
+                    I wrote to let them know ready to come back they
+                  </span>
                   <span className="right-box-subtitle">kicked</span>
-                  <span className="right-box-subtitle">me of their team slack of all of us are make company</span>
+                  <span className="right-box-subtitle">
+                    me of their team slack of all of us are make company
+                  </span>
                   <span className="right-box-subtitle">email.</span>
                 </div>
               </div>
@@ -102,8 +118,12 @@ export default function App() {
           <div className="workstitle-box">
             <span className="workstitle-first-title">Work</span>
             <h1 className="workstitle-title">How it Works</h1>
-            <span className="workstitle-first-subtitle">It's through mistakes that you actually can grow you get rid of</span>
-            <span className="workstitle-first-subtitle">everything that is not essential to makihave to get bad.</span>
+            <span className="workstitle-first-subtitle">
+              It's through mistakes that you actually can grow you get rid of
+            </span>
+            <span className="workstitle-first-subtitle">
+              everything that is not essential to makihave to get bad.
+            </span>
             <div className="workstitle-services-box">
               <div className="workstitle-services-items-box">
                 <i className="fas fa-drumstick-bite fa-4x" />
@@ -115,14 +135,18 @@ export default function App() {
               </div>
               <div className="workstitle-services-items-box">
                 <i className="fas fa-hand-pointer fa-4x" />
-                <h1 className="workstitle-services-items-title">Choose How often</h1>
+                <h1 className="workstitle-services-items-title">
+                  Choose How often
+                </h1>
                 <span>Our team of chefs do the prep</span>
                 <span>work no more chopping,</span>
                 <span>measuring, or sink of full of dishes</span>
               </div>
               <div className="workstitle-services-items-box">
                 <i className="fas fa-truck fa-4x"></i>
-                <h1 className="workstitle-services-items-title">Fast Deliveries</h1>
+                <h1 className="workstitle-services-items-title">
+                  Fast Deliveries
+                </h1>
                 <span>your freshly prepped 15-min dinner</span>
                 <span>kits arrive on your doorstep in a</span>
                 <span>refrigerated box.</span>
@@ -135,8 +159,12 @@ export default function App() {
             <div className="menu-title-box">
               <span className="menu-title">Menu</span>
               <h1>Explore Our Best Menu</h1>
-              <span className="menu-items">It's through mistakes that you actually can grow you get rid of</span>
-              <span className="menu-items">everything that isn't essential to makihave to get have.</span>
+              <span className="menu-items">
+                It's through mistakes that you actually can grow you get rid of
+              </span>
+              <span className="menu-items">
+                everything that isn't essential to makihave to get have.
+              </span>
             </div>
             <MenuFood>
               {Foods.map((Foods, index) => (
@@ -146,7 +174,9 @@ export default function App() {
                     <span>{Foods.name}</span>
                     <span>{Foods.price}$</span>
                   </div>
-                  <span className="menu-food-subtitle">Served with french fries + drink</span>
+                  <span className="menu-food-subtitle">
+                    Served with french fries + drink
+                  </span>
                   <div className="menu-food-description">
                     <p>Choice of: Coke, fanta, sprite, upgrate to large</p>
                     <p>fries, Add whopper patty, Add Tender crisp patty</p>
@@ -175,13 +205,26 @@ export default function App() {
           <span className="mini-title">Testimonial</span>
           <div className="about-box">
             <h1>What They Are Saying</h1>
-            <span className="about-drescription">It's through mistakes that you actually can grow you get rid of</span>
-            <span className="about-drescription">everything that isn't essential to makihave to get have.</span>
+            <span className="about-drescription">
+              It's through mistakes that you actually can grow you get rid of
+            </span>
+            <span className="about-drescription">
+              everything that isn't essential to makihave to get have.
+            </span>
           </div>
-          <img className="img" height={100} src={require('./Assets/dude.svg')} alt="" />
+          <img
+            className="img"
+            height={100}
+            src={require("./Assets/dude.svg")}
+            alt=""
+          />
           <div className="image-box">
-            <span>They are engaged communicators and dedicated problem-solvers</span>
-            <span>regardless of time constraints. The team manage projet them.</span>
+            <span>
+              They are engaged communicators and dedicated problem-solvers
+            </span>
+            <span>
+              regardless of time constraints. The team manage projet them.
+            </span>
             <div className="stars-box">
               <i className="fas fa-star" />
               <i className="fas fa-star" />
@@ -198,7 +241,13 @@ export default function App() {
             <h1>Let us help you</h1>
             <div className="button-box">
               <input placeholder="yourmail@gmail.com" />
-              <button onClick={() => alert("You can't send an email, this is a prototype.")}>Send</button>
+              <button
+                onClick={() =>
+                  alert("You can't send an email, this is a prototype.")
+                }
+              >
+                Send
+              </button>
             </div>
           </div>
         </AboutTheCreator>
@@ -236,10 +285,11 @@ export default function App() {
               </div>
             </div>
           </div>
-          <span className="credits"><p>2020</p>All rights reserved.</span>
+          <span className="credits">
+            <p>2020</p>All rights reserved.
+          </span>
         </Footer>
       </Main>
     </div>
   );
 }
-
