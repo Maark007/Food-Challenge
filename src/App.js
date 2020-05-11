@@ -1,26 +1,245 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Styles/global.css'
+import Foods from './models/food'
+import {
+  Main,
+  TitleContainer,
+  FoodBox,
+  Informations,
+  SecondFoodBox,
+  WorksTitle,
+  Menu,
+  MenuFood,
+  AboutTheCreator,
+  Footer
+} from './Styles/styled'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main>
+        <TitleContainer>
+          <h1>Foodie</h1>
+          <div className="title-container-box">
+            <span className="title-container-items">Home</span>
+            <span className="title-container-items">Packpages</span>
+            <span className="title-container-items">About us</span>
+            <span className="title-container-items">Contact us</span>
+            <i className="fas fa-shopping-cart title-container-items" />
+            <button className="title-container-button">Booking now</button>
+          </div>
+        </TitleContainer>
+        <FoodBox>
+          <div className="food-box-title">
+            <span>Your favorite food</span>
+            <span>Delivered Hot &</span>
+            <span>Fresh</span>
+          </div>
+          <div className="food-box-subtitle">
+            <span>Healtly switcher chefs fo all the prep work, like peeding,</span>
+            <span>chopping & marinating, so you can cook a fresh food.</span>
+            <button className="food-box-button">Order now <i className="fas fa-arrow-right" /></button>
+          </div>
+        </FoodBox>
+        <Informations>
+          <div className="item-box">
+            <div className="box-column">
+              <div className="yellow-circe">
+                <i className="far fa-clock fa-2x" />
+              </div>
+              <span>Today 10:00 am - 7:00 pm</span>
+              <p>Working hours</p>
+            </div>
+          </div>
+          <div className="item-box">
+            <div className="box-column">
+              <div className="yellow-circe">
+                <i className="fas fa-map-marker-alt fa-2x" />
+              </div>
+              <span>Velyka vasylkivska 100</span>
+              <p>Get Directions</p>
+            </div>
+          </div>
+          <div className="item-box">
+            <div className="box-column">
+              <div className="yellow-circe">
+                <i className="fas fa-phone-alt fa-2x" />
+              </div>
+              <span>+38 (063)833 24 15</span>
+              <p>Call Online</p>
+            </div>
+          </div>
+        </Informations>
+        <SecondFoodBox>
+          <div className="right-box">
+            <div className="right-title-box">
+              <span className="right-box-afterword">About</span>
+              <span className="right-box-title">Food is An important Part</span>
+              <span className="right-box-title">of a Balanced Diet</span>
+              <div className="right-box-subtitle-box">
+                <span className="right-box-subtitle">They actually assured me over and over that take</span>
+                <span className="right-box-subtitle">little time off and come back and work. Fast</span>
+                <span className="right-box-subtitle">forward tow weeks after</span>
+                <span className="right-box-subtitle">we are going for a new project.</span>
+                <div className="right-box-subtitle-box">
+                  <span className="right-box-subtitle">I wrote to let them know ready to come back they</span>
+                  <span className="right-box-subtitle">kicked</span>
+                  <span className="right-box-subtitle">me of their team slack of all of us are make company</span>
+                  <span className="right-box-subtitle">email.</span>
+                </div>
+              </div>
+              <div className="right-box-button-box">
+                <button className="right-box-button">Learn more</button>
+                <div className="right-box-video-player">
+                  <i className="fas fa-play" />
+                </div>
+                <span>Wacth video</span>
+              </div>
+            </div>
+          </div>
+        </SecondFoodBox>
+        <WorksTitle>
+          <div className="workstitle-box">
+            <span className="workstitle-first-title">Work</span>
+            <h1 className="workstitle-title">How it Works</h1>
+            <span className="workstitle-first-subtitle">It's through mistakes that you actually can grow you get rid of</span>
+            <span className="workstitle-first-subtitle">everything that is not essential to makihave to get bad.</span>
+            <div className="workstitle-services-box">
+              <div className="workstitle-services-items-box">
+                <i className="fas fa-drumstick-bite fa-4x" />
+                <h1 className="workstitle-services-items-title">Pick Meals</h1>
+                <span>Choose Your meals our</span>
+                <span>diverse weekly menu. Find gluten</span>
+                <span>or dairy free, low carb & veggie</span>
+                <span>options</span>
+              </div>
+              <div className="workstitle-services-items-box">
+                <i className="fas fa-hand-pointer fa-4x" />
+                <h1 className="workstitle-services-items-title">Choose How often</h1>
+                <span>Our team of chefs do the prep</span>
+                <span>work no more chopping,</span>
+                <span>measuring, or sink of full of dishes</span>
+              </div>
+              <div className="workstitle-services-items-box">
+                <i className="fas fa-truck fa-4x"></i>
+                <h1 className="workstitle-services-items-title">Fast Deliveries</h1>
+                <span>your freshly prepped 15-min dinner</span>
+                <span>kits arrive on your doorstep in a</span>
+                <span>refrigerated box.</span>
+              </div>
+            </div>
+          </div>
+        </WorksTitle>
+        <Menu>
+          <div className="menu-box">
+            <div className="menu-title-box">
+              <span className="menu-title">Menu</span>
+              <h1>Explore Our Best Menu</h1>
+              <span className="menu-items">It's through mistakes that you actually can grow you get rid of</span>
+              <span className="menu-items">everything that isn't essential to makihave to get have.</span>
+            </div>
+            <MenuFood>
+              {Foods.map((Foods, index) => (
+                <div key={index}>
+                  <img src={Foods.image} alt="" />
+                  <div className="menu-food-title">
+                    <span>{Foods.name}</span>
+                    <span>{Foods.price}$</span>
+                  </div>
+                  <span className="menu-food-subtitle">Served with french fries + drink</span>
+                  <div className="menu-food-description">
+                    <p>Choice of: Coke, fanta, sprite, upgrate to large</p>
+                    <p>fries, Add whopper patty, Add Tender crisp patty</p>
+                    <p>and more...</p>
+                    <div className="icons-box">
+                      <div className="icons-stars">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                      <div className="yellow-corner">
+                        <i className="fas fa-plus fa-2x"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </MenuFood>
+            <div className="menu-food-button">
+              <button>Load more</button>
+            </div>
+          </div>
+        </Menu>
+        <AboutTheCreator>
+          <span className="mini-title">Testimonial</span>
+          <div className="about-box">
+            <h1>What They Are Saying</h1>
+            <span className="about-drescription">It's through mistakes that you actually can grow you get rid of</span>
+            <span className="about-drescription">everything that isn't essential to makihave to get have.</span>
+          </div>
+          <img className="img" height={100} src={require('./Assets/dude.svg')} alt="" />
+          <div className="image-box">
+            <span>They are engaged communicators and dedicated problem-solvers</span>
+            <span>regardless of time constraints. The team manage projet them.</span>
+            <div className="stars-box">
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+            </div>
+            <div>
+              <span className="myname-container">Maark</span>
+              <span className="mycountry-container">Brazil</span>
+            </div>
+          </div>
+          <div className="input-box">
+            <h1>Have Question in mind ?</h1>
+            <h1>Let us help you</h1>
+            <div className="button-box">
+              <input placeholder="yourmail@gmail.com" />
+              <button onClick={() => alert("You can't send an email, this is a prototype.")}>Send</button>
+            </div>
+          </div>
+        </AboutTheCreator>
+        <Footer>
+          <div className="footer-box-container">
+            <h1>Foodie</h1>
+            <div className="footer-box">
+              <span className="footer-box-items">Home</span>
+              <span className="footer-box-items">Packpages</span>
+              <span className="footer-box-items">About us</span>
+              <span className="footer-box-items">Contact us</span>
+            </div>
+          </div>
+          <div className="last-box">
+            <div className="last-box-icons">
+              <i className="fab fa-facebook-f fa-2x" />
+              <i className="fab fa-youtube fa-2x yellow" />
+              <i className="fab fa-vimeo-v fa-2x" />
+              <i className="fab fa-twitter fa-2x" />
+            </div>
+            <div className="column-info-box">
+              <div className="column-info">
+                <span className="column-info-items">Quality</span>
+                <span className="column-info-items">Help</span>
+                <span className="column-info-items">Share</span>
+              </div>
+              <div className="column-info">
+                <span className="column-info-items">244-522-1542</span>
+                <span className="column-info-items">hello@food.com</span>
+                <span className="column-info-items">press@food.com</span>
+              </div>
+              <div className="column-info">
+                <span className="column-info-items">Terms & conditions</span>
+                <span className="column-info-items">Privacy policy</span>
+              </div>
+            </div>
+          </div>
+          <span className="credits"><p>2020</p>All rights reserved.</span>
+        </Footer>
+      </Main>
     </div>
   );
 }
 
-export default App;
