@@ -1,11 +1,32 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Main = styled.div``;
+export const Main = styled.div`
+  width: 100%;
+  .wave-box {
+    direction: ltr;
+    position: absolute;
+  }
+  .wave {
+    direction: ltr;
+    position: absolute;
+    width: 50%;
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+  }
+  .last-wave {
+    width: 50%;
+    position: absolute;
+  }
+  .last-wave-box {
+    width: 100%;
+    direction: rtl;
+  }
+`;
 
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 1%;
   h1 {
     margin-left: 10px;
     color: #2d2d2c;
@@ -14,7 +35,6 @@ export const TitleContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    margin-right: 10%;
     width: 100%;
     @media screen and (max-width: 852px) {
       margin: 0;
@@ -24,10 +44,13 @@ export const TitleContainer = styled.div`
     }
     .title-container-items {
       align-self: center;
-      margin: 0 2% 0 3%;
+      margin: 1% 2% 0 3%;
       font-weight: 600;
+      z-index: 1000;
     }
     .title-container-button {
+      position: relative;
+      margin: 1% 2% 0 3% !important;
       font-weight: 800;
       padding: 15px;
       border: none;
@@ -35,6 +58,26 @@ export const TitleContainer = styled.div`
       border-radius: 10px;
       color: #2d2d2c;
       cursor: pointer;
+    }
+  }
+  img {
+    position: absolute;
+    z-index: 1000;
+    top: 30px;
+    height: 500px;
+    @media screen and (max-width: 1350px) {
+      height: 450px;
+      top: 30px;
+    }
+    @media screen and (max-width: 1250px) {
+      height: 400px;
+      top: 70px;
+    }
+    @media screen and (max-width: 1150px) {
+      height: 300px;
+    }
+    @media screen and (max-width: 1050px) {
+      display: none;
     }
   }
 `;
@@ -146,14 +189,40 @@ export const Informations = styled.div`
 
 export const SecondFoodBox = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1040px) {
+      justify-content: center;
+      align-self: center;
+      align-items: center;
+    }
+  svg {
+    width: 100%;
+    height: 500px;
+    @media screen and (max-width: 1040px) {
+      display: none;
+    }
+  }
+  img {
+    height:450px;
+    position: absolute;
+    align-self: center;
+    left: -100px;
+    @media screen and (max-width: 1040px) {
+      display: none;
+    }
+  }
+  .food-box-svg {
+    }
+  .left-box {
+    display: flex;
+    justify-content: flex-start !important;
+    align-self: center;
+  }
   .right-box {
     display: flex;
     justify-content: flex-end;
-    margin: 10% 20% 0 0;
-    @media screen and (max-width: 695px) {
-      margin: 0;
-      justify-content: center;
-    }
+    margin: 10% 10% 0 10%;;
     .right-box-afterword {
       color: #f5941b;
       font-size: 21px;

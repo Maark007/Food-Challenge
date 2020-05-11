@@ -1,6 +1,6 @@
-import React from "react";
-import "./Styles/global.css";
-import Foods from "./models/food";
+import React from 'react';
+import './Styles/global.css';
+import Foods from './models/food';
 import {
   Main,
   TitleContainer,
@@ -12,7 +12,7 @@ import {
   MenuFood,
   AboutTheCreator,
   Footer,
-} from "./Styles/styled";
+} from './Styles/styled';
 
 export default function App() {
   return (
@@ -21,12 +21,26 @@ export default function App() {
         <TitleContainer>
           <h1>Foodie</h1>
           <div className="title-container-box">
+            <svg
+              className="wave"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="30 0 180 310"
+            >
+              <path
+                fill="#f5941b"
+                fillOpacity="1000"
+                d="M0, 30L30,5C30,160,120,96,180,90.7C240,85,300,139,360,149.3C420,160,480,128,540,101.3C600,75,660,53,720,69.3C780,85,840,139,900,170.7C960,203,1020,213,1080,213.3C1140,213,1200,203,1260,181.3C1320,160,1380,128,1410,112L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+              />
+            </svg>
+            <img src={require('./Assets/FirstFood.png')} alt="" />
             <span className="title-container-items">Home</span>
             <span className="title-container-items">Packpages</span>
             <span className="title-container-items">About us</span>
             <span className="title-container-items">Contact us</span>
             <i className="fas fa-shopping-cart title-container-items" />
-            <button className="title-container-button">Booking now</button>
+            <button className="title-container-button" type="submit">
+              Booking now
+            </button>
           </div>
         </TitleContainer>
         <FoodBox>
@@ -40,8 +54,9 @@ export default function App() {
               Healtly switcher chefs fo all the prep work, like peeding,
             </span>
             <span>chopping & marinating, so you can cook a fresh food.</span>
-            <button className="food-box-button">
-              Order now <i className="fas fa-arrow-right" />
+            <button className="food-box-button" type="submit">
+              Order now
+              <i className="fas fa-arrow-right" />
             </button>
           </div>
         </FoodBox>
@@ -75,6 +90,16 @@ export default function App() {
           </div>
         </Informations>
         <SecondFoodBox>
+          <div className="food-box-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 500 100">
+              <path
+                fill="#f5941b"
+                fillOpacity="1000"
+                d="M0,0L0,0.3C0,0,0,0,00,-280.7C1900,-300,180,6,576,0.7C672,8,768,5,864,15.3C360,6,1056,128,1152,165.3C248,203,1344,245,1392,266.7L1440,288L1440,320L1392,30C1344,320,148,320,1152,20C156,320,960,320,864,320C768,320,672,320,576,0C420,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              />
+            </svg>
+          </div>
+          <img src={require('./Assets/FirstFood.png')} alt="" />
           <div className="right-box">
             <div className="right-title-box">
               <span className="right-box-afterword">About</span>
@@ -105,7 +130,9 @@ export default function App() {
                 </div>
               </div>
               <div className="right-box-button-box">
-                <button className="right-box-button">Learn more</button>
+                <button className="right-box-button" type="submit">
+                  Learn more
+                </button>
                 <div className="right-box-video-player">
                   <i className="fas fa-play" />
                 </div>
@@ -119,7 +146,7 @@ export default function App() {
             <span className="workstitle-first-title">Work</span>
             <h1 className="workstitle-title">How it Works</h1>
             <span className="workstitle-first-subtitle">
-              It's through mistakes that you actually can grow you get rid of
+              Its through mistakes that you actually can grow you get rid of
             </span>
             <span className="workstitle-first-subtitle">
               everything that is not essential to makihave to get bad.
@@ -215,7 +242,7 @@ export default function App() {
           <img
             className="img"
             height={100}
-            src={require("./Assets/dude.svg")}
+            src={require('./Assets/dude.svg')}
             alt=""
           />
           <div className="image-box">
@@ -286,8 +313,22 @@ export default function App() {
             </div>
           </div>
           <span className="credits">
-            <p>2020</p>All rights reserved.
+            <p>2020</p>
+            All rights reserved.
           </span>
+          <div className="last-wave-box">
+            <svg
+              className="last-wave"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="10 0 1200 200"
+            >
+              <path
+                fill="#ff5500"
+                fillOpacity="1"
+                d="M1,224L30,192C60,160,120,96,180,90.7C240,85,300,139,360,149.3C420,160,480,128,540,101.3C600,75,660,53,720,69.3C780,85,840,139,900,170.7C960,203,1020,213,1080,213.3C1140,213,1200,203,1260,181.3C1320,160,1380,128,1410,112L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+              />
+            </svg>
+          </div>
         </Footer>
       </Main>
     </div>
