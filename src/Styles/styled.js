@@ -111,15 +111,17 @@ export const FoodBox = styled.div`
   .food-box-subtitle {
     display: flex;
     flex-direction: column;
-    margin: 1% 5px 0 5%;
+    margin: 1% 10px 0 5%;
     color: #615b54;
     font-size: 18px;
     @media screen and (max-width: 695px) {
       align-items: center;
+      text-align: center;
       font-size: 16px;
-      margin: 30px 0;
+      margin: 30px 10px 0 10px;
     }
     @media screen and (max-width: 1051px) {
+      margin: 30px 10px 0 10px;
       align-items: center;
     }
   }
@@ -362,6 +364,12 @@ export const WorksTitle = styled.div`
     .workstitle-services-items-title {
       margin: 0 0 2% 0;
       color: #2d2d2c;
+      @media screen and (max-width: 913px) {
+        font-size: 17px;
+      }
+      @media screen and (max-width: 845px) {
+        font-size: 21px;
+      }
     }
   }
 `;
