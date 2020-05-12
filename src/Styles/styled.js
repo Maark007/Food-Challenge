@@ -28,7 +28,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
   h1 {
-    margin-left: 10px;
+    margin: 10px 0 0 10px;
     color: #2d2d2c;
   }
   .title-container-box {
@@ -42,11 +42,15 @@ export const TitleContainer = styled.div`
     @media screen and (max-width: 695px) {
       display: none;
     }
+
     .title-container-items {
       align-self: center;
       margin: 1% 2% 0 3%;
       font-weight: 600;
       z-index: 1000;
+      @media screen and (max-width: 852px) {
+        font-size: 14px;
+      }
     }
     .title-container-button {
       position: relative;
@@ -57,7 +61,12 @@ export const TitleContainer = styled.div`
       margin: 0 0 0 2%;
       border-radius: 10px;
       color: #2d2d2c;
+      background: #fff;
       cursor: pointer;
+      @media screen and (max-width: 1050px) {
+        background: #f5941b;
+        color: #fff;
+      }
     }
   }
   img {
@@ -73,10 +82,10 @@ export const TitleContainer = styled.div`
       height: 400px;
       top: 70px;
     }
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1050px) {
       height: 300px;
     }
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1051px) {
       display: none;
     }
   }
@@ -95,17 +104,23 @@ export const FoodBox = styled.div`
       align-items: center;
       font-size: 35px;
     }
+    @media screen and (max-width: 1051px) {
+      align-items: center;
+    }
   }
   .food-box-subtitle {
     display: flex;
     flex-direction: column;
-    margin: 30px 5% 0;
+    margin: 1% 5px 0 5%;
     color: #615b54;
     font-size: 18px;
     @media screen and (max-width: 695px) {
       align-items: center;
-      text-align: center;
+      font-size: 16px;
       margin: 30px 0;
+    }
+    @media screen and (max-width: 1051px) {
+      align-items: center;
     }
   }
   .food-box-button {
@@ -192,28 +207,28 @@ export const SecondFoodBox = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 1040px) {
-      justify-content: center;
-      align-self: center;
-      align-items: center;
-    }
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }
   svg {
     width: 100%;
     height: 500px;
-    @media screen and (max-width: 1040px) {
+    @media screen and (max-width: 1051px) {
       display: none;
     }
   }
   img {
-    height:450px;
+    height: 450px;
     position: absolute;
     align-self: center;
-    left: -100px;
-    @media screen and (max-width: 1040px) {
+    left: -110px;
+    @media screen and (max-width: 1051px) {
       display: none;
     }
   }
   .food-box-svg {
-    }
+  }
   .left-box {
     display: flex;
     justify-content: flex-start !important;
@@ -222,7 +237,7 @@ export const SecondFoodBox = styled.div`
   .right-box {
     display: flex;
     justify-content: flex-end;
-    margin: 10% 10% 0 10%;;
+    margin: 10% 10% 0 10%;
     .right-box-afterword {
       color: #f5941b;
       font-size: 21px;
@@ -255,6 +270,10 @@ export const SecondFoodBox = styled.div`
     span {
       color: #615b54;
       align-self: center;
+      font-size: 19px;
+      @media screen and (max-width: 852px) {
+        font-size: 16px;
+      }
     }
   }
   .right-box-button {
@@ -307,6 +326,7 @@ export const WorksTitle = styled.div`
     }
     .workstitle-first-subtitle {
       color: #615b54;
+      margin: 5px 5px 0 5px;
       font-size: 19px;
       @media screen and (max-width: 695px) {
         font-size: 16px;
@@ -316,19 +336,23 @@ export const WorksTitle = styled.div`
       display: flex;
       justify-content: space-around;
       margin: 10% 0 0 0;
-      @media screen and (max-width: 695px) {
+      @media screen and (max-width: 845px) {
         flex-direction: column;
       }
     }
     .workstitle-services-items-box {
       display: flex;
       flex-direction: column;
-      @media screen and (max-width: 695px) {
-        margin: 2% 0 3% 0;
+      margin: 0 5px 0 5px;
+      @media screen and (max-width: 845px) {
+        margin: 2% 20px 3% 0;
       }
       span {
         color: #615b54;
         font-size: 18px;
+        @media screen and (max-width: 845px) {
+          font-size: 15px;
+        }
       }
       i {
         color: #f5941b;
@@ -336,7 +360,7 @@ export const WorksTitle = styled.div`
       }
     }
     .workstitle-services-items-title {
-      margin: 0 0 5% 0;
+      margin: 0 0 2% 0;
       color: #2d2d2c;
     }
   }
@@ -370,7 +394,7 @@ export const Menu = styled.div`
     font-weight: 600;
   }
   .menu-title-box {
-    margin: 7% 0 0 0;
+    margin: 7% 5px 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,8 +406,12 @@ export const Menu = styled.div`
     .menu-items {
       color: #615b54;
       font-size: 18px;
-      @media screen and (max-width: 695px) {
+      margin: 0 5px 0 5px;
+      @media screen and (max-width: 845px) {
         font-size: 16px;
+      }
+      @media screen and (max-width: 695px) {
+        font-size: 15px;
       }
     }
   }
@@ -462,6 +490,7 @@ export const AboutTheCreator = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 0 5px 0 5px;
     h1 {
       margin: 2% 0 3% 0;
       color: #2d2d2c;
@@ -479,6 +508,7 @@ export const AboutTheCreator = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 0 5px 0 5px;
     span {
       color: #2d2d2c;
       font-size: 19px;
