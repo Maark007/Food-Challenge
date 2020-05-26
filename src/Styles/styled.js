@@ -2,18 +2,6 @@ import styled from 'styled-components';
 
 export const Main = styled.div`
   width: 100%;
-  .wave-box {
-    direction: ltr;
-    position: absolute;
-  }
-  .wave {
-    direction: ltr;
-    position: absolute;
-    width: 50%;
-    @media screen and (max-width: 1050px) {
-      display: none;
-    }
-  }
   .last-wave {
     width: 50%;
     position: absolute;
@@ -21,6 +9,34 @@ export const Main = styled.div`
   .last-wave-box {
     width: 100%;
     direction: rtl;
+  }
+  .central-mid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: 1050px) {
+      justify-content: center;
+    }
+    .breakfast-container {
+      margin: 5% 5% 0 5%;
+      img {
+        height: 21vw;
+        @media screen and (max-width: 1050px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .event-container {
+    display: flex;
+    align-items: center;
+    img {
+      height: 25vw;
+      align-self: center;
+      @media screen and (max-width: 852px) {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -34,7 +50,6 @@ export const TitleContainer = styled.div`
   .title-container-box {
     display: flex;
     justify-content: flex-end;
-    z-index: 1000;
     width: 100%;
     @media screen and (max-width: 852px) {
       margin: 0;
@@ -47,7 +62,10 @@ export const TitleContainer = styled.div`
       align-self: center;
       margin: 1% 2% 0 3%;
       font-weight: 600;
-      z-index: 1000;
+      cursor: pointer;
+      :hover {
+        color: #f5941b;
+      }
       @media screen and (max-width: 852px) {
         font-size: 14px;
       }
@@ -55,18 +73,14 @@ export const TitleContainer = styled.div`
     .title-container-button {
       position: relative;
       margin: 1% 2% 0 3% !important;
-      font-weight: 800;
+      font-weight: 600;
       padding: 15px;
       border: none;
       margin: 0 0 0 2%;
       border-radius: 10px;
-      color: #2d2d2c;
-      background: #fff;
+      color: #fff;
+      background: #f5941b;
       cursor: pointer;
-      @media screen and (max-width: 1050px) {
-        background: #f5941b;
-        color: #fff;
-      }
     }
   }
   img {
@@ -111,12 +125,12 @@ export const FoodBox = styled.div`
   .food-box-subtitle {
     display: flex;
     flex-direction: column;
-    margin: 1% 10px 0 5%;
+    margin: 2% 10px 0 0;
     color: #615b54;
-    font-size: 18px;
+    font-size: 17px;
+    text-align: center;
     @media screen and (max-width: 695px) {
       align-items: center;
-      text-align: center;
       font-size: 16px;
       margin: 30px 10px 0 10px;
     }
@@ -127,7 +141,7 @@ export const FoodBox = styled.div`
   }
   .food-box-button {
     width: 160px;
-    margin-top: 3%;
+    margin: 6% 0 0 0;
     height: 50px;
     border: none;
     background: #f5941b;
@@ -167,7 +181,7 @@ export const Informations = styled.div`
   }
   .item-box {
     align-self: center;
-    margin: 0 5% 0 5%;
+    margin: 0 4% 0 4%;
     @media screen and (max-width: 852px) {
       margin: 2% 2% 2% 2%;
     }
@@ -207,29 +221,10 @@ export const Informations = styled.div`
 export const SecondFoodBox = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
   @media screen and (max-width: 1040px) {
     justify-content: center;
     align-self: center;
     align-items: center;
-  }
-  svg {
-    width: 100%;
-    height: 500px;
-    @media screen and (max-width: 1051px) {
-      display: none;
-    }
-  }
-  img {
-    height: 450px;
-    position: absolute;
-    align-self: center;
-    left: -110px;
-    @media screen and (max-width: 1051px) {
-      display: none;
-    }
-  }
-  .food-box-svg {
   }
   .left-box {
     display: flex;
@@ -238,8 +233,12 @@ export const SecondFoodBox = styled.div`
   }
   .right-box {
     display: flex;
-    justify-content: flex-end;
-    margin: 10% 10% 0 10%;
+    width: 100%;
+    margin: 10% 5% 0 5%;
+    justify-content: space-between;
+    @media screen and (max-width: 852px) {
+      justify-content: center;
+    }
     .right-box-afterword {
       color: #f5941b;
       font-size: 21px;
@@ -273,6 +272,10 @@ export const SecondFoodBox = styled.div`
       color: #615b54;
       align-self: center;
       font-size: 19px;
+      cursor: pointer;
+      :hover {
+        text-decoration: underline;
+      }
       @media screen and (max-width: 852px) {
         font-size: 16px;
       }
@@ -312,7 +315,7 @@ export const WorksTitle = styled.div`
   justify-content: center;
   align-items: center;
   .workstitle-first-title {
-    margin: 15% 0 0 0;
+    margin: 10% 0 0 0;
     color: #f5941b;
     font-weight: 600;
   }
@@ -383,8 +386,8 @@ export const Menu = styled.div`
       display: flex;
       justify-content: center;
       margin: 5% 0 0 0;
-
       button {
+        cursor: pointer;
         width: 160px;
         height: 50px;
         border: none;
@@ -476,6 +479,7 @@ export const MenuFood = styled.div`
     height: 60px;
     width: 100px;
     border-radius: 14px 0 0 0;
+    cursor: pointer;
     i {
       color: #fff;
     }
@@ -539,7 +543,7 @@ export const AboutTheCreator = styled.div`
   .myname-container {
     color: #000;
     font-weight: 600;
-    margin: 0 5px 0 0;
+    margin: 0 5px 0;
   }
   .mycountry-container {
     color: #615b54;
@@ -580,6 +584,9 @@ export const AboutTheCreator = styled.div`
     display: flex;
     justify-content: center;
   }
+  .about-me {
+    margin: 20px 20px 0 20px;
+  } 
 `;
 
 export const Footer = styled.div`
