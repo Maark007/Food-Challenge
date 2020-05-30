@@ -116,7 +116,7 @@ export const FoodBox = styled.div`
     font-weight: 600;
     @media screen and (max-width: 695px) {
       align-items: center;
-      font-size: 35px;
+      font-size: 30px;
     }
     @media screen and (max-width: 1051px) {
       align-items: center;
@@ -431,7 +431,7 @@ export const Menu = styled.div`
 export const MenuFood = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 6% 5% 2% 5%;
 
   img {
