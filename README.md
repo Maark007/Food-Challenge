@@ -8,7 +8,7 @@
 
 ![Optional Text](/src/Assets/preview.PNG)
 
-## Tools utilized
+## Tools used
 ```
 -React.js
 -Styled-Components
