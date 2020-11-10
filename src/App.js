@@ -1,6 +1,6 @@
 import React from 'react';
-import './Styles/global.css';
-import Foods from './models/food';
+import Foods from './models/data';
+
 import {
   Main,
   TitleContainer,
@@ -40,8 +40,6 @@ export default function App() {
               <div className="food-box-subtitle">
                 <span>
                   Healtly switcher chefs fo all the prep work, like peeding,
-                </span>
-                <span>
                   chopping & marinating, so you can cook a fresh food.
                 </span>
                 <button className="food-box-button" type="submit">
@@ -51,7 +49,7 @@ export default function App() {
               </div>
             </div>
             <div className="breakfast-container">
-              <img src={require('./Assets/breakfast.svg')} alt=""/> 
+              <img src={require('./Assets/breakfast.svg')} alt="" />
             </div>
           </div>
         </FoodBox>
@@ -125,7 +123,7 @@ export default function App() {
               </div>
             </div>
             <div className="event-container">
-              <img src={require('./Assets/event.svg')} alt=""/> 
+              <img src={require('./Assets/event.svg')} alt="" />
             </div>
           </div>
         </SecondFoodBox>

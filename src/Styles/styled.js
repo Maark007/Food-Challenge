@@ -44,8 +44,12 @@ export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
   h1 {
-    margin: 10px 0 0 10px;
+    margin: 15px;
     color: #2d2d2c;
+    @media screen and (max-width: 695px) {
+      width: 100%;
+      text-align: center;
+    }
   }
   .title-container-box {
     display: flex;
@@ -128,8 +132,8 @@ export const FoodBox = styled.div`
     margin: 2% 10px 0 0;
     color: #615b54;
     font-size: 17px;
-    text-align: center;
     @media screen and (max-width: 695px) {
+      text-align: justify;
       align-items: center;
       font-size: 16px;
       margin: 30px 10px 0 10px;
@@ -433,7 +437,6 @@ export const MenuFood = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 6% 5% 2% 5%;
-
   img {
     height: 220px;
     margin: 10% 0 0 0;
@@ -586,7 +589,7 @@ export const AboutTheCreator = styled.div`
   }
   .about-me {
     margin: 20px 20px 0 20px;
-  } 
+  }
 `;
 
 export const Footer = styled.div`

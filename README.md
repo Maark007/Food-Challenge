@@ -6,14 +6,14 @@
 
 ## Preview
 
-![Optional Text](/src/Assets/preview.PNG)
+![Optional Text](/src/Assets/github/preview.PNG)
 
-## Tools utilized
+## Tools used
 ```
--React.js
--Styled-Components
--eslint
--prettier
+- React.js
+- Styled-Components
+- Eslint
+- Prettier
 
 ```
 ## How run my app
